@@ -96,7 +96,7 @@ if [ "$shell_cmd" == "exit" ];
 then break
 fi
 /usr/bin/expect <<EOF
-spawn pssh -h my_hosts.txt -l $user_name -A -v -P -o evil_results $shell_cmd
+spawn pssh -h my_hosts.txt -l $user_name -A -v -P -o _results $shell_cmd
 expect "*Password:*"
 send "${password}\r"
 expect eof
